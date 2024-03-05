@@ -518,6 +518,7 @@ public class JobContainer extends AbstractContainer {
 
             //设置 executeMode
             for (Configuration taskGroupConfig : taskGroupConfigs) {
+                taskGroupConfig.set(CoreConstant.DATAX_CORE_CONTAINER_TASKGROUP_ID, this.configuration.getInt(CoreConstant.DATAX_COR_JOB_CUSTOM_ID));
                 taskGroupConfig.set(CoreConstant.DATAX_CORE_CONTAINER_JOB_MODE, executeMode.getValue());
             }
 

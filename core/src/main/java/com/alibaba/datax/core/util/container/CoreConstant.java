@@ -16,6 +16,8 @@ public class CoreConstant {
 	public static final String DATAX_CORE_CONTAINER_MODEL = "core.container.model";
 
 	public static final String DATAX_CORE_CONTAINER_JOB_ID = "core.container.job.id";
+	//自定义任务jobId
+	public static final String DATAX_COR_JOB_CUSTOM_ID = "core.container.custom.job.id";
 
 	public static final String DATAX_CORE_CONTAINER_TRACE_ENABLE = "core.container.trace.enable";
 
