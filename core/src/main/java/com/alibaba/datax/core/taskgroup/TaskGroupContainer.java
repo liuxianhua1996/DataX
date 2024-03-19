@@ -131,7 +131,7 @@ public class TaskGroupContainer extends AbstractContainer {
             LOG.info(String.format(
                     "taskGroupId=[%d] start [%d] channels for [%d] tasks.",
                     this.taskGroupId, channelNumber, taskCountInThisTaskGroup));
-            
+            /** 注册通讯类 **/
             this.containerCommunicator.registerCommunication(taskConfigs);
 
             Map<Integer, Configuration> taskConfigMap = buildTaskConfigMap(taskConfigs); //taskId与task配置
@@ -146,6 +146,7 @@ public class TaskGroupContainer extends AbstractContainer {
             while (true) {
             	//1.判断task状态
             	boolean failedOrKilled = false;
+                /** 获取task通讯类 **/
             	Map<Integer, Communication> communicationMap = containerCommunicator.getCommunicationMap();
             	for(Map.Entry<Integer, Communication> entry : communicationMap.entrySet()){
             		Integer taskId = entry.getKey();
